@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, FileText, Send, ArrowUpRight, Copy, Check } from "lucide-react";
+import { Mail, FileText, ArrowUpRight, Copy, Check } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { RESUME_PATH, CONTACT_EMAIL } from "@/data";
@@ -17,18 +17,18 @@ export const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-20 sm:py-24 w-full relative">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-violet-600/5 dark:bg-violet-600/10 blur-[160px] rounded-full pointer-events-none -z-10" />
+      <div className="ambient-glow top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="rounded-3xl bg-white/80 dark:bg-[#070b1a]/90 border border-slate-200/80 dark:border-white/10 p-6 sm:p-12 lg:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.12)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.6)] text-center flex flex-col items-center backdrop-blur-2xl">
+        <div className="glass-card shadow-2xl p-6 sm:p-12 lg:p-16 text-center flex flex-col items-center">
           <div className="flex items-center gap-2 font-mono text-xs font-semibold tracking-wider text-violet-500 dark:text-violet-400 mb-3">
-            <span className="w-2 h-2 rounded-full bg-violet-500 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
             <span>05 INITIATE CONTACT</span>
           </div>
 
           <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             Let&apos;s Build Something{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-300 to-amber-300">
+            <span className="gradient-text">
               High-Impact
             </span>
           </h2>
@@ -40,7 +40,7 @@ export const Contact: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-10 w-full sm:w-auto">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 rounded-xl text-sm sm:text-base font-semibold bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white shadow-[0_0_25px_rgba(139,92,246,0.35)] hover:shadow-[0_0_35px_rgba(139,92,246,0.5)] transition-all hover:-translate-y-0.5 w-full sm:w-auto"
+              className="btn-primary gap-2 px-6 sm:px-7 py-3 text-sm sm:text-base w-full sm:w-auto"
             >
               <Mail className="w-4 h-4" />
               <span>Say Hello</span>
@@ -50,16 +50,16 @@ export const Contact: React.FC = () => {
               href={RESUME_PATH}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 rounded-xl text-sm sm:text-base font-semibold border border-slate-300 dark:border-white/15 bg-white dark:bg-white/5 text-slate-800 dark:text-slate-200 hover:border-violet-500 hover:text-violet-600 dark:hover:text-violet-400 transition-all hover:-translate-y-0.5 shadow-sm w-full sm:w-auto"
+              className="btn-secondary gap-2 px-6 sm:px-7 py-3 text-sm sm:text-base w-full sm:w-auto group"
             >
-              <FileText className="w-4 h-4 text-violet-400" />
+              <FileText className="w-4 h-4 text-violet-400 group-hover:scale-110 transition-transform" />
               <span>Resume</span>
               <ArrowUpRight className="w-4 h-4 opacity-60" />
             </a>
 
             <button
               onClick={handleCopyEmail}
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-mono text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-white/10 hover:border-slate-400 dark:hover:border-white/20 transition-all w-full sm:w-auto"
+              className="btn-secondary gap-2 px-5 py-3 text-sm font-mono text-slate-600 dark:text-slate-400 w-full sm:w-auto"
             >
               {copied ? (
                 <>

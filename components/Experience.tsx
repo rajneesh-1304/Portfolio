@@ -7,16 +7,16 @@ import { Building2, Calendar, CheckCircle2 } from "lucide-react";
 export const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-20 sm:py-24 w-full relative">
-      <div className="absolute top-1/2 left-10 w-[500px] h-[350px] bg-violet-600/5 dark:bg-violet-600/10 blur-[150px] rounded-full pointer-events-none -z-10" />
+      <div className="ambient-glow top-1/2 left-10" />
 
       <div className="flex flex-col items-start mb-12 sm:mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2 font-mono text-xs font-semibold tracking-wider text-violet-500 dark:text-violet-400 mb-3">
-          <span className="w-2 h-2 rounded-full bg-violet-500 animate-pulse"></span>
+          <span className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
           <span>04 PRODUCTION JOURNEY</span>
         </div>
         <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
           Industry Experience &{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-indigo-300 to-amber-300">
+          <span className="gradient-text">
             Track Record
           </span>
         </h2>
@@ -29,7 +29,7 @@ export const Experience: React.FC = () => {
         <div className="relative pl-5 sm:pl-10 border-l-2 border-violet-500/30 dark:border-violet-500/20 space-y-10 sm:space-y-14">
           {workExperience.map((card) => (
             <div key={card.id} className="relative group">
-              <div className="absolute -left-[27px] sm:-left-[47px] top-1.5 w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full border-2 border-violet-500 bg-white dark:bg-[#070b1a] shadow-[0_0_15px_rgba(139,92,246,0.7)] group-hover:scale-125 transition-transform duration-200" />
+              <div className="absolute -left-[27px] sm:-left-[47px] top-1.5 w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full border-2 border-violet-500 bg-white dark:bg-[#070b1a] shadow-md shadow-violet-500/50 group-hover:scale-125 transition-transform duration-200" />
 
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-4">
                 <div>
@@ -42,7 +42,7 @@ export const Experience: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] sm:text-xs font-mono font-medium bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 w-fit">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 w-fit">
                   <Calendar className="w-3.5 h-3.5 text-violet-400 flex-shrink-0" />
                   <span>{card.duration}</span>
                   {card.location && (
@@ -54,7 +54,7 @@ export const Experience: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-3xl bg-white/80 dark:bg-[#070b1a]/85 border border-slate-200/80 dark:border-white/10 p-5 sm:p-8 shadow-[0_2px_15px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_25px_rgba(0,0,0,0.4)] hover:shadow-xl hover:border-violet-500/40 dark:hover:border-violet-500/30 transition-all duration-200">
+              <div className="glass-card glass-card-hover p-5 sm:p-8">
                 {card.desc && (
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4 sm:mb-5 font-medium">
                     {card.desc}
@@ -80,7 +80,7 @@ export const Experience: React.FC = () => {
                     {card.skills.map((skill, sIdx) => (
                       <span
                         key={sIdx}
-                        className="text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-white/10 font-mono font-medium hover:border-violet-500/40 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+                        className="text-xs px-2.5 sm:px-3 py-1 rounded-lg bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-white/10 font-mono font-medium hover:border-violet-500/40 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
                       >
                         {skill}
                       </span>

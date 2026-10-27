@@ -63,7 +63,7 @@ export const DotNavigation: React.FC = () => {
             <span
               className={`block rounded-full transition-all duration-300 ${
                 isActive
-                  ? "w-3 h-3 bg-violet-500 ring-4 ring-violet-500/25 shadow-[0_0_12px_rgba(139,92,246,0.8)]"
+                  ? "w-3 h-3 bg-violet-500 ring-4 ring-violet-500/25 shadow-md shadow-violet-500/50"
                   : "w-2 h-2 bg-slate-400/60 dark:bg-slate-600 hover:bg-slate-500 dark:hover:bg-slate-400 group-hover:scale-125"
               }`}
             />

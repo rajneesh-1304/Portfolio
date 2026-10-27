@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-
 import Navbar from "@/components/Navbar";
 import DotNavigation from "@/components/DotNavigation";
 import Hero from "@/components/Hero";
@@ -14,9 +13,8 @@ import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
-    <main className="relative bg-slate-50 dark:bg-[#040711] text-slate-900 dark:text-white flex justify-center items-center flex-col overflow-x-hidden w-full transition-colors duration-300 min-h-screen">
+    <main className="relative flex flex-col items-center overflow-x-hidden w-full min-h-screen">
       <Navbar />
-
       <DotNavigation />
 
       <div className="w-full">

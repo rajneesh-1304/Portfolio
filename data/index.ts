@@ -1,4 +1,4 @@
-export const RESUME_PATH = "/resume_rajneesh_kumar.pdf";
+export const RESUME_PATH = "./resume_rajneesh_kumar.pdf";
 export const CONTACT_EMAIL = "kumarrajneesh1304@gmail.com";
 
 export const navItems = [
